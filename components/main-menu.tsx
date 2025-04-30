@@ -16,7 +16,7 @@ export default function MainMenu({ onNavigate }: MainMenuProps) {
 
   const menuItems = [
     {
-      title: "Poster Materi",
+      title: "Materi",
       icon: <FileText size={40} />,
       color: "bg-blue-500 hover:bg-blue-600",
       screen: "poster",
@@ -37,7 +37,7 @@ export default function MainMenu({ onNavigate }: MainMenuProps) {
       character: "girl",
     },
     {
-      title: "Petunjuk",
+      title: "Poster",
       icon: <BookOpen size={40} />,
       color: "bg-yellow-500 hover:bg-yellow-600",
       screen: "instructions",
