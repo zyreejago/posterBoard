@@ -4,9 +4,9 @@ import { useState, useEffect } from "react"
 import StartScreen from "@/components/start-screen"
 import MainMenu from "@/components/main-menu"
 import PosterSection from "@/components/poster-section"
-import QuizSection from "@/components/quiz-section"
 import GameSection from "@/components/game-section"
 import InstructionsSection from "@/components/instructions-section"
+import PetunjukSection from "@/components/petunjuk-section"
 import ScreenTransition from "@/components/screen-transition"
 
 export default function PosterBoard() {
@@ -69,16 +69,16 @@ export default function PosterBoard() {
         <PosterSection onBack={() => navigateTo("menu")} />
       </ScreenTransition>
 
-      <ScreenTransition isVisible={currentScreen === "quiz"} direction={transitionDirection}>
-        <QuizSection onBack={() => navigateTo("menu")} score={score} setScore={setScore} />
-      </ScreenTransition>
-
       <ScreenTransition isVisible={currentScreen === "game"} direction={transitionDirection}>
         <GameSection onBack={() => navigateTo("menu")} score={score} setScore={setScore} />
       </ScreenTransition>
 
       <ScreenTransition isVisible={currentScreen === "instructions"} direction={transitionDirection}>
         <InstructionsSection onBack={() => navigateTo("menu")} />
+      </ScreenTransition>
+
+      <ScreenTransition isVisible={currentScreen === "petunjuk"} direction={transitionDirection}>
+        <PetunjukSection onBack={() => navigateTo("menu")} />
       </ScreenTransition>
     </div>
   )
